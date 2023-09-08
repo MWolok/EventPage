@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
 	const [openMenu, setOpenMenu] = useState(false);
-    const [headerShow, setHeaderShow] = useState(false);
+	const [headerShow, setHeaderShow] = useState(false);
 
 	const toggleMenu = (value) => {
 		setOpenMenu(value);
@@ -15,9 +15,9 @@ const Header = () => {
 
 	const handleScroll = () => {
 		if (window.scrollY > 0) {
-            setHeaderShow(true)
+			setHeaderShow(true);
 		} else {
-            setHeaderShow(false)
+			setHeaderShow(false);
 		}
 	};
 
@@ -28,7 +28,11 @@ const Header = () => {
 		<>
 			<AppBar
 				position="fixed"
-				style={{ backgroundColor:headerShow &&  "#2f2f2f", padding: "10px 0px", boxShadow:'none'}}>
+				style={{
+					backgroundColor: headerShow ? "#2f2f2f" : "transparent",
+					padding: "10px 0px",
+					boxShadow: "none",
+				}}>
 				<Toolbar>
 					<div className="header_logo">
 						<div className="font_righteous header_logo_venue">Event</div>
@@ -37,6 +41,7 @@ const Header = () => {
 					<IconButton
 						arial-label="Menu"
 						color="inherit"
+                        style={{fontSize:'30px'}}
 						onClick={() => toggleMenu(true)}>
 						<MenuIcon></MenuIcon>
 					</IconButton>
