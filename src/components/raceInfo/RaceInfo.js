@@ -59,6 +59,25 @@ const RaceInfo = () => {
                         
                     </div>
                 </Zoom>
+                <Zoom className="r_item" triggerOnce>
+                    <div>
+                        <div className="r_outer">
+                            <div className="r_inner">
+                                <div className="r_icon_square bck_yellow"></div>
+                                    <div className="r_icon" style={{background:`url(${icon_location})`}}></div>
+                                    <div className="r_title">
+                                        Event Location
+                                    </div>
+                                    {nextRaceData? (  <div className="r_desc">
+                                        {nextRaceData.Circuit.circuitName}
+                                    </div>):<p>Loading...</p>}
+                                  
+                                </div>
+                            </div>
+
+                        
+                    </div>
+                </Zoom>
 
                 </div>
 			</div>

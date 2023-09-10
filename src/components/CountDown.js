@@ -3,6 +3,7 @@ import { Slide } from "react-awesome-reveal";
 import axios from "axios";
 
 const CountDown = () => {
+    
 	const [nextRaceDate, setNextRaceDate] = useState(null);
 	const [time, setTime] = useState({
 		days: "0",
